@@ -17,4 +17,17 @@ namespace Tuples
 
     return Tuple.Create(employeeId, firstName, lastName);
   }
+  
+  public class TupleDeconstructor
+  {
+    public (int a, int b, string c) GetEmployee()
+    {
+      int age = 1;
+      int badgeNumber = 1234;
+      string name = "Greg";
+      return (age, badgeNumber, name);
+    }
+    //use it now to get the data you want
+    (int age, int badge, string name) = GetEmployee();
+  }
 }
